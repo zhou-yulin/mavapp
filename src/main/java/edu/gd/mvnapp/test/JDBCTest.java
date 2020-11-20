@@ -31,10 +31,10 @@ public class JDBCTest {
             // 4、处理sql执行结果
             while (resultSet.next())
             {
-                String id = resultSet.getString("姓名");
-                String name = resultSet.getString("性别");
+                String id = resultSet.getString("id");
+                String name = resultSet.getString("name");
 
-                System.out.println("姓名: " + name + " 性别: " + id);
+                System.out.println("ID: " + id + " NAME: " + name);
             }
         }catch (ClassNotFoundException e)
         {
@@ -73,9 +73,9 @@ public class JDBCTest {
         while (resultSet.next())
         {
             //String id = resultSet.getString("姓名");
-            String name = resultSet.getString("姓名");
+            String name = resultSet.getString("name");
 
-            System.out.println("姓名: " + name );//+ //" 性别: " + id);
+            System.out.println("name: " + name );//+ //" 性别: " + id);
         }
         DBUtil.close(resultSet, statement, connection);
     }
