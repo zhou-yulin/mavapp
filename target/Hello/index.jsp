@@ -13,15 +13,8 @@
 
 <body>
 
-    <a href="main.jsp">suprise</a>
-    <br>
-    <a href="ifelse.jsp">suprise2</a>
-    <br>
-    <a href="switch.jsp">suprise3</a>
-    <br>
-    <a href="dowhile.jsp">suprise4</a>
-    <br>
-    <a href="form.jsp">suprise5</a>
-
+    <h1>
+        Fuck javaweb!
+    </h1>
 </body>
 </html>
