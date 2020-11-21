@@ -2,6 +2,7 @@ package edu.gd.mvnapp.servlet.student;
 
 import com.google.gson.Gson;
 import edu.gd.mvnapp.dao.StudentDao;
+import edu.gd.mvnapp.entity.BaseResponse;
 import edu.gd.mvnapp.entity.Student;
 
 import javax.servlet.ServletException;
@@ -20,8 +21,14 @@ public class StudetAllServlet extends HttpServlet {
 
         req.setCharacterEncoding("utf-8");
         List<Student> students = StudentDao.getStudents();
+
+        BaseResponse<List<Student>> response = new BaseResponse<List<Student>>();
+        response.setCode(200);
+        response.setMsg("Successfully");
+        response.setData(students);
+
         Gson gson = new Gson();
-        String json = gson.toJson(students);
+        String json = gson.toJson(response);
         resp.setContentType("application/json");
         PrintWriter out = resp.getWriter();
         out.print(json);
